@@ -1,0 +1,11 @@
+sudo: required
+
+language: c
+
+os:
+    - osx
+
+compiler: clang
+
+script:
+    - make && ./matrix-test
