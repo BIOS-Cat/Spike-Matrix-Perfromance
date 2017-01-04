@@ -24,7 +24,7 @@ int main()
     clock_t diffA[100];
     clock_t diffB[100];
 
-    const int count = 2 << 24;
+    const int count = 2 << 22;
     for(int k = 0; k < 100; k++)
     {
         mat4 *left_matrix = calloc(sizeof(mat4), count);
@@ -82,7 +82,7 @@ int main()
         totalB += diffB[k];
     }
 
-    printf("AVERAGES: %lu : %lu\n\n", totalA / 100, totalB / 100);
+    printf("AVERAGES:  Return reference - %lu : Return Value - %lu\n\n", totalA / 100, totalB / 100);
 
     return 0;
 }
